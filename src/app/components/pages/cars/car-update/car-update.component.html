@@ -1,0 +1,128 @@
+<h1>Update Car</h1>
+<form
+  [formGroup]="carUpdateForm"
+  (ngSubmit)="update()"
+  class="brand-update ml-auto"
+>
+  <div class="form-group d-flex flex-column">
+    <img width="200" [src]="carUpdateForm.value.image" class="mb-3" />
+    <input type="text" formControlName="image" class="form-control mb-3" />
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      id="id"
+      formControlName="id"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('id').hasError('required') &&
+        carUpdateForm.get('id').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      brandName="brandName"
+      formControlName="brandName"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('brandName').hasError('required') &&
+        carUpdateForm.get('brandName').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      colorId="colorId"
+      formControlName="colorId"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('colorId').hasError('required') &&
+        carUpdateForm.get('colorId').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      colorName="colorName"
+      formControlName="colorName"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('colorName').hasError('required') &&
+        carUpdateForm.get('colorName').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      dailyPrice="dailyPrice"
+      formControlName="dailyPrice"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('dailyPrice').hasError('required') &&
+        carUpdateForm.get('dailyPrice').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div class="form-group">
+    <input
+      type="text"
+      description="description"
+      formControlName="description"
+      class="form-control mb-3"
+      placeholder=""
+    />
+    <div
+      class="alert alert-danger"
+      *ngIf="
+        carUpdateForm.get('description').hasError('required') &&
+        carUpdateForm.get('description').dirty
+      "
+    >
+      can't be left blank!
+    </div>
+  </div>
+  <div>
+    <button
+      type="submit"
+      class="btn btn-primary"
+      [disabled]="carUpdateForm.invalid"
+    >
+      Update
+    </button>
+  </div>
+</form>

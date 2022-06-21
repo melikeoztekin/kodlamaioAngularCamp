@@ -1,0 +1,82 @@
+<div class="mb-2">
+  <h2>Additional Services</h2>
+  <button class="btn btn-secondary" routerLink="/additionalServiceAdd">
+    Add new brand
+  </button>
+</div>
+<table class="table table-light">
+  <thead>
+    <tr>
+      <th scope="col">Additional</th>
+      <th scope="col">Daily Price</th>
+      <th scope="col">Description</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let additionalService of additionalServices">
+      <td>{{ additionalService.additional }}</td>
+      <td>{{ additionalService.dailyPrice }}₺</td>
+      <td>{{ additionalService.description }}</td>
+      <td>
+        <button
+          type="button"
+          class="btn btn-success"
+          routerLink="/additionalServiceUpdate/{{ additionalService.id }}"
+          title="Update Additional Service"
+        >
+          <i class="fa-solid fa-edit"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-danger"
+          (click)="open(content, additionalService.id)"
+          title="Delete Additional Service"
+        >
+          <i class="fa-solid fa-trash"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          title="Add To Cart"
+          (click)="addToCart2(additionalService)"
+        >
+          <i class="fa-solid fa-plus"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">
+      Are you sure you will delete it?
+    </h4>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="modal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-footer">
+    <button
+      type="button"
+      class="btn btn-outline-success"
+      (click)="deleteAdditionalServiceById(deleteId)"
+    >
+      Yes
+    </button>
+    <button
+      type="button"
+      class="btn btn-outline-danger"
+      (click)="modal.close('Save click')"
+    >
+      No
+    </button>
+  </div>
+</ng-template>

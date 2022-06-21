@@ -1,0 +1,47 @@
+<div class="row">
+  <div class="col">
+    <div ngbDropdown class="d-inline-block">
+      <button
+        type="button"
+        class="btn btn-outline-danger"
+        id="dropdownBasic1"
+        ngbDropdownToggle
+      >
+        Cart <i class="fa-solid fa-shopping-cart"></i>
+      </button>
+      <table
+        ngbDropdownMenu
+        aria-labelledby="dropdownBasic1"
+        style="width: 200px"
+      >
+        <tr ngbDropdownItem *ngFor="let cartItem of cartItems">
+          <td>
+            <span class="badge badge-pill badge-primary bg-danger text-light">
+              {{ cartItem.quantity }}</span
+            >
+          </td>
+          <td>
+            {{ cartItem.car.brandName }}
+          </td>
+          <td>{{ cartItem.car.dailyPrice }}₺</td>
+          <td>
+            <button
+              class="btn btn-primary"
+              (click)="removeFromCart(cartItem.car)"
+            >
+              <i class="fa fa-trash"></i>
+            </button>
+          </td>
+        </tr>
+        <tr *ngFor="let cartItem2 of cartItems2">
+          <tbody>
+            {{
+              cartItem2.additionalService.additional
+            }}
+          </tbody>
+          <td>{{ cartItem2.additionalService.dailyPrice }}₺</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
