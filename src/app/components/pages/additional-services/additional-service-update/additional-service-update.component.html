@@ -25,16 +25,16 @@
   <div class="form-group">
     <input
       type="text"
-      id="dailyPrice"
-      formControlName="dailyPrice"
+      id="price"
+      formControlName="price"
       class="form-control mb-3"
       placeholder=""
     />
     <div
       class="alert alert-danger"
       *ngIf="
-        additionalServiceUpdateForm.get('dailyPrice').hasError('required') &&
-        additionalServiceUpdateForm.get('dailyPrice').dirty
+        additionalServiceUpdateForm.get('price').hasError('required') &&
+        additionalServiceUpdateForm.get('price').dirty
       "
     >
       can't be left blank!

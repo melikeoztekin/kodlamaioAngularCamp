@@ -25,17 +25,14 @@
     <input
       type="text"
       placeholder="daily price"
-      #dailyPrice="ngModel"
-      [(ngModel)]="additionalService.dailyPrice"
+      #price="ngModel"
+      [(ngModel)]="additionalService.price"
       class="form-control"
-      name="dailyPrice"
-      id="dailyPrice"
+      name="price"
+      id="price"
       required
     />
-    <div
-      class="alert alert-danger"
-      *ngIf="dailyPrice.invalid && dailyPrice.dirty"
-    >
+    <div class="alert alert-danger" *ngIf="price.invalid && price.dirty">
       can't be left blank!
     </div>
   </div>

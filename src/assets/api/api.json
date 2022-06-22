@@ -1,0 +1,198 @@
+{
+  "cars": [
+    {
+      "id": 1,
+      "image": "https://www.oyuncakvitrinim.com/images/urunler/Welly-Toyota-Corolla-1-36-Model-Araba--Beyaz-resim-850.jpg",
+      "brandId": "1",
+      "brandName": "Toyota",
+      "colorId": "1",
+      "colorName": "white",
+      "dailyPrice": 100,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 2,
+      "image": "https://www.mercedes-benz.com.tr/passengercars/mercedes-benz-cars/models/c-class/saloon/design/design-packages/amg-optics/_jcr_content/par/productinfotextimage/media2/slides/videoimageslide_e3a3/image.MQ6.12.20190927190444.jpeg",
+      "brandId": "2",
+      "brandName": "Mercedes",
+      "colorId": "2",
+      "colorName": "black",
+      "dailyPrice": 200,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 3,
+      "image": "https://i2.cnnturk.com/i/cnnturk/75/1200x0/626bdbc3214ed82130344663.jpg",
+      "brandId": "3",
+      "brandName": "BMW",
+      "colorId": "3",
+      "colorName": "gray",
+      "dailyPrice": 300,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 4,
+      "image": "https://img.joomcdn.net/58152fc3f782f4e99ffb45bfd337b6fac379733d_1024_692.jpeg",
+      "brandId": "4",
+      "brandName": "Honda",
+      "colorId": "4",
+      "colorName": "red",
+      "dailyPrice": 400,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 7,
+      "image": "https://ae01.alicdn.com/kf/H487f3c11d2fa432eaeef1135d69c1df4s/1-ift-araba-DRL-LED-beyaz-ve-Amber-sis-lambas-g-nd-z-farlar-12V-g.jpg_Q90.jpg_.webp",
+      "brandId": "5",
+      "brandName": "Tesla",
+      "colorId": "1",
+      "colorName": "white",
+      "dailyPrice": "500",
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    }
+  ],
+  "brands": [
+    {
+      "id": 1,
+      "name": "Toyota",
+      "image": "../assets/images/brands/toyota.png"
+    },
+    {
+      "id": 2,
+      "name": "Mercedes",
+      "image": "../assets/images/brands/mercedes.png"
+    },
+    {
+      "id": 3,
+      "name": "BMW",
+      "image": "../assets/images/brands/bmw.png"
+    },
+    {
+      "id": 4,
+      "name": "Honda",
+      "image": "../assets/images/brands/honda.png"
+    },
+    {
+      "id": 5,
+      "name": "Tesla",
+      "image": "../assets/images/brands/tesla.png"
+    },
+    {
+      "id": 6,
+      "name": "Lamborghini",
+      "image": "../assets/images/brands/lamborghini.png"
+    },
+    {
+      "id": 7,
+      "name": "Porsche",
+      "image": "../assets/images/brands/porsche.png"
+    },
+    {
+      "id": 8,
+      "name": "Mustang",
+      "image": "https://productimages.hepsiburada.net/s/54/375/11195112063026.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Togg",
+      "image": "../assets/images/brands/togg.png"
+    },
+    {
+      "id": 10,
+      "name": "FIAT",
+      "image": "../assets/images/brands/fiat.png"
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "name": "white",
+      "image": "../assets/images/colors/white.jpg"
+    },
+    {
+      "id": 2,
+      "name": "black",
+      "image": "../assets/images/colors/black.jpg"
+    },
+    {
+      "id": 3,
+      "name": "gray",
+      "image": "../assets/images/colors/gray.jpg"
+    },
+    {
+      "id": 4,
+      "name": "red",
+      "image": "../assets/images/colors/red.jpg"
+    }
+  ],
+  "additionalServices": [
+    {
+      "id": 1,
+      "additional": "home delivery",
+      "price": 1000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 2,
+      "additional": "return address",
+      "price": 2000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 3,
+      "additional": "additional driver",
+      "price": 3000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 4,
+      "additional": "GPS",
+      "price": 4000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 5,
+      "additional": "Child seat",
+      "price": 5000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    },
+    {
+      "id": 6,
+      "additional": "Roadside Assistance",
+      "price": 6000,
+      "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt, odit."
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "user1",
+      "email": "user1@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 2,
+      "userName": "user2",
+      "email": "user2@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 3,
+      "userName": "user3",
+      "email": "user3@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 4,
+      "userName": "user4",
+      "email": "user4@gmail.com",
+      "password": "123456"
+    },
+    {
+      "id": 5,
+      "userName": "user5",
+      "email": "user5@gmail.com",
+      "password": "123456"
+    }
+  ]
+}

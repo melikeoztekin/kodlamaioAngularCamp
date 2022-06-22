@@ -1,4 +1,3 @@
-import { CartItem, CartItem2 } from './cartItem';
+import { CartItem } from './cartItem';
 
 export const CartItems: CartItem[] = [];
-export const CartItems2: CartItem2[] = [];

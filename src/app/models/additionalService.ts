@@ -1,6 +1,6 @@
 export class AdditionalService {
   id: number;
   additional: string;
-  dailyPrice: number;
+  price: number;
   description: string;
 }

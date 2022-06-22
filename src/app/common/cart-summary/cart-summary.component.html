@@ -15,15 +15,10 @@
         style="width: 200px"
       >
         <tr ngbDropdownItem *ngFor="let cartItem of cartItems">
-          <td>
-            <span class="badge badge-pill badge-primary bg-danger text-light">
-              {{ cartItem.quantity }}</span
-            >
-          </td>
-          <td>
-            {{ cartItem.car.brandName }}
-          </td>
-          <td>{{ cartItem.car.dailyPrice }}₺</td>
+          <td>{{ cartItem.car.brandName }}{{ cartItem.car.dailyPrice }}</td>
+          <ul>
+            <li><strong>Total Price : </strong>{{ cartItem.totalPrice }}₺</li>
+          </ul>
           <td>
             <button
               class="btn btn-primary"
@@ -32,14 +27,11 @@
               <i class="fa fa-trash"></i>
             </button>
           </td>
-        </tr>
-        <tr *ngFor="let cartItem2 of cartItems2">
-          <tbody>
-            {{
-              cartItem2.additionalService.additional
-            }}
-          </tbody>
-          <td>{{ cartItem2.additionalService.dailyPrice }}₺</td>
+          <ul>
+            <li *ngFor="let additionalItem of cartItem.additionalService">
+              {{ additionalItem.additional }}{{ additionalItem.price }}
+            </li>
+          </ul>
         </tr>
       </table>
     </div>

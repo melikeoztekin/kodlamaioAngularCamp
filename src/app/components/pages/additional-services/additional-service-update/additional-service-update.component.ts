@@ -14,7 +14,7 @@ export class AdditionalServiceUpdateComponent implements OnInit {
   additionalServiceUpdateForm = new FormGroup({
     id: new FormControl(0, [Validators.required]),
     additional: new FormControl('', [Validators.required]),
-    dailyPrice: new FormControl(0, [Validators.required]),
+    price: new FormControl(0, [Validators.required]),
     description: new FormControl('', [Validators.required]),
   });
   constructor(
@@ -36,8 +36,8 @@ export class AdditionalServiceUpdateComponent implements OnInit {
             this.additionalServiceUpdateForm.controls['additional'].setValue(
               data.additional
             );
-            this.additionalServiceUpdateForm.controls['dailyPrice'].setValue(
-              data.dailyPrice
+            this.additionalServiceUpdateForm.controls['price'].setValue(
+              data.price
             );
             this.additionalServiceUpdateForm.controls['description'].setValue(
               data.description

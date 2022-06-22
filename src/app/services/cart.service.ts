@@ -1,9 +1,8 @@
-import { AdditionalService } from './../models/additionalService';
+import { CartItem } from 'src/app/models/cartItem';
 import { ToastrService } from 'ngx-toastr';
 import { Car } from 'src/app/models/car';
 import { Injectable } from '@angular/core';
-import { CartItems, CartItems2 } from '../models/cartItems';
-import { CartItem, CartItem2 } from '../models/cartItem';
+import { CartItems } from '../models/cartItems';
 
 @Injectable({
   providedIn: 'root',
@@ -14,23 +13,12 @@ export class CartService {
   addToCart(car: Car) {
     let item = CartItems.find((c) => c.car.id === car.id);
     if (item) {
-      item.quantity += 1;
+      alert('araç zaten eklendi');
     } else {
       let cartItem = new CartItem();
       cartItem.car = car;
-      cartItem.quantity = 1;
+      cartItem.totalPrice = car.dailyPrice;
       CartItems.push(cartItem);
-    }
-  }
-  addToCart2(additionalService: AdditionalService) {
-    let item = CartItems2.find(
-      (c) => c.additionalService.id === additionalService.id
-    );
-    if (item) {
-    } else {
-      let cartItem2 = new CartItem2();
-      cartItem2.additionalService = additionalService;
-      CartItems2.push(cartItem2);
     }
   }
 
@@ -41,8 +29,5 @@ export class CartService {
 
   list(): CartItem[] {
     return CartItems;
-  }
-  list2(): CartItem2[] {
-    return CartItems2;
   }
 }

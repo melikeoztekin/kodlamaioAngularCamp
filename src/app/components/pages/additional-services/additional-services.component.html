@@ -8,7 +8,7 @@
   <thead>
     <tr>
       <th scope="col">Additional</th>
-      <th scope="col">Daily Price</th>
+      <th scope="col">Price</th>
       <th scope="col">Description</th>
       <th></th>
       <th></th>
@@ -18,7 +18,7 @@
   <tbody>
     <tr *ngFor="let additionalService of additionalServices">
       <td>{{ additionalService.additional }}</td>
-      <td>{{ additionalService.dailyPrice }}₺</td>
+      <td>{{ additionalService.price }}₺</td>
       <td>{{ additionalService.description }}</td>
       <td>
         <button
@@ -43,9 +43,20 @@
         <button
           class="btn btn-primary"
           title="Add To Cart"
-          (click)="addToCart2(additionalService)"
+          (click)="addToCart(additionalService)"
+          *ngIf="isAdded(additionalService.id) == false"
         >
           <i class="fa-solid fa-plus"></i>
+        </button>
+      </td>
+      <td>
+        <button
+          class="btn btn-primary"
+          title="Add To Cart"
+          (click)="removeAdditionalService(additionalService.id)"
+          *ngIf="isAdded(additionalService.id) == true"
+        >
+          <i class="fa-solid fa-close"></i>
         </button>
       </td>
     </tr>
