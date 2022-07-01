@@ -1,11 +1,17 @@
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {
+  HttpClient,
+  HttpClientModule,
+  HTTP_INTERCEPTORS,
+} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +33,11 @@ import { AdditionalServiceUpdateComponent } from './components/pages/additional-
 import { LoginPageComponent } from './components/pages/login-page/login-page.component';
 import { CarDetailsComponent } from './components/pages/car-details/car-details.component';
 import { ReservationComponent } from './components/pages/reservation/reservation.component';
+import { ContactComponent } from './components/pages/contact/contact.component';
+
+export function httpTranslateLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http);
+}
 
 @NgModule({
   declarations: [
@@ -49,6 +60,7 @@ import { ReservationComponent } from './components/pages/reservation/reservation
     LoginPageComponent,
     CarDetailsComponent,
     ReservationComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -59,6 +71,13 @@ import { ReservationComponent } from './components/pages/reservation/reservation
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     NgbModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: httpTranslateLoaderFactory,
+        deps: [HttpClient],
+      },
+    }),
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },

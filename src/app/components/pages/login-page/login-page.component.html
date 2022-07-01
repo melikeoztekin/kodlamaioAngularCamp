@@ -8,7 +8,7 @@
         >
           <i class="fa-solid fa-user"></i>
         </div>
-        <h2>Login</h2>
+        <h2>{{ "user_info.header" | translate }}</h2>
       </li>
     </ul>
     <div class="tab-content">
@@ -26,7 +26,7 @@
             class="form-control"
             id="email"
             name="email"
-            placeholder="name@example.com"
+            placeholder="{{ 'user_info.placeholderEmail' | translate }}"
           />
           <input
             formControlName="password"
@@ -34,10 +34,10 @@
             class="form-control"
             id="password"
             name="password"
-            placeholder="Password"
+            placeholder="{{ 'user_info.placeholderPassword' | translate }}"
           />
           <button class="btn btn-success btn-block" (click)="login()">
-            Login
+            {{ "user_info.button" | translate }}
           </button>
         </div>
       </div>
